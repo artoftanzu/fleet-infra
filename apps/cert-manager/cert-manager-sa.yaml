@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    tkg.tanzu.vmware.com/tanzu-package: cert-manager-tmc-catalog
+  name: cert-manager-tmc-catalog-sa
+  namespace: tmc-catalog
