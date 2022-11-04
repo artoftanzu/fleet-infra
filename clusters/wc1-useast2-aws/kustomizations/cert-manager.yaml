@@ -5,6 +5,7 @@ metadata:
   name: cert-manager-tmc-catalog
   namespace: flux-system
 spec:
+  interval: 10m0s
   path: ../../../apps/cert-manager/
   prune: true
   sourceRef:
