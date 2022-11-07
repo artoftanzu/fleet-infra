@@ -13,5 +13,5 @@ spec:
     name: artoftanzu-fleetinfra
   postBuild:
     substitute:
-      service_fqdn: tap-gui.wc1-useast1-aws.tanzu.art
+      service_fqdn: tap-gui.wc1-useast2-aws.tanzu.art
       service_vanity_fqdn: tap-gui.tanzu.art
