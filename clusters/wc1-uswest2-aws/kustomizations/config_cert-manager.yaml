@@ -6,11 +6,11 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ../../config/cert-manager/
+  path: ../../../config/cert-manager/
   prune: true
   sourceRef:
     kind: GitRepository
-    name: artoftanzu-fleetinfra
+    name: flux-system
   postBuild:
     substitute:
       service_fqdn: tap-gui.wc1-uswest2-aws.tanzu.art
