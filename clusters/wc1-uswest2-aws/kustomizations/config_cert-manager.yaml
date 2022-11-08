@@ -1,0 +1,17 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: letsencrypt-http01-clusterissuer
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  path: ../../../config/cert-manager/
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: artoftanzu-fleetinfra
+  postBuild:
+    substitute:
+      service_fqdn: tap-gui.wc1-uswest2-aws.tanzu.art
+      service_vanity_fqdn: tap-gui.tanzu.art
